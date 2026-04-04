@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahaayak | Mental Health Companion</title>
+    <link rel="stylesheet" href="style.css?v=2.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-heart-pulse"></i>
+                <h1>Sahaayak</h1>
+            </div>
+            <p class="subtitle">Your empathetic AI companion</p>
+            <div class="controls">
+                <div class="control-item" id="lang-toggle" title="Switch Language">
+                    <span class="active">EN</span>
+                    <span class="separator">/</span>
+                    <span>TE</span>
+                </div>
+                <button class="control-item" id="tts-btn" title="Toggle Text-to-Speech">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <button class="control-item" id="new-chat-btn" title="New Conversation">
+                    <i class="fas fa-plus"></i> New Chat
+                </button>
+                <button class="control-item primary" id="book-btn">
+                    <i class="fas fa-calendar-check"></i> Book Doctor
+                </button>
+            </div>
+        </header>
+
+        <main id="chat-box">
+            <div class="message bot-message">
+                <p>Hello. I'm Sahaayak. How are you feeling today? You can share anything with me.</p>
+                <span class="time">Just now</span>
+            </div>
+        </main>
+
+        <div class="mood-tracker">
+            <div id="mood-history" class="mood-icons"></div>
+            <span id="current-mood">Current Vibe: Detecting...</span>
+        </div>
+
+        <footer>
+            <div id="typing-indicator" class="hidden">
+                <span></span><span></span><span></span>
+            </div>
+            <form id="chat-form">
+                <button type="button" id="voice-btn" title="Speak to Sahaayak">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <input type="text" id="user-input" placeholder="Type your feelings here..." autocomplete="off">
+                <button type="submit" id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            <div class="disclaimer">
+                <p>⚠️ Sahaayak is an AI companion for emotional support, not a replacement for professional therapy. If in crisis, call 9876543210 (INDIA) or your local helpline.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Doctor Booking Modal -->
+    <div id="booking-modal" class="modal hidden">
+        <div class="modal-content glass-morphism">
+            <div class="modal-header">
+                <h2><i class="fas fa-user-md"></i> Book an Appointment</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="patient-name">Patient Name</label>
+                    <input type="text" id="patient-name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="doctor-type">Specialty</label>
+                    <select id="doctor-type" required>
+                        <option value="psychiatrist">Psychiatrist</option>
+                        <option value="therapist">Clinical Therapist</option>
+                        <option value="counselor">Counselor</option>
+                        <option value="physician">General Physician</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-date">Preferred Date</label>
+                    <input type="date" id="appointment-date" required>
+                </div>
+                <button type="submit" class="submit-booking">Confirm Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js?v=2.1"></script>
+</body>
+</html>
