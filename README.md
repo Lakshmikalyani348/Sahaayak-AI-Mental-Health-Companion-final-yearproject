@@ -102,4 +102,4 @@ Sahaayak is an AI companion for emotional support, **not** a professional medica
 
 ---
 
-**Developed with ❤️ for Mental Wellness.**
+**Developed with ❤️ by Lakshmi kalyani.**
